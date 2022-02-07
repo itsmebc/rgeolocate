@@ -87,9 +87,9 @@ ip_info <- function(ip_addresses, token = NULL){
                  ifelse(is.null(token), "",
                         paste0("?token=", token)))
   
-  output <- do.call("rbind", lapply(urls, ipinfo_single))
+  output <- do.call("dplyr::bind_rows", lapply(urls, ipinfo_single))
   
   return(#cbind(data.frame(ip_address = ip_addresses,
-              #            stringsAsFactors = FALSE),
-               output)#)
+    #            stringsAsFactors = FALSE),
+    output)#)
 }
