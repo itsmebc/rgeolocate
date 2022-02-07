@@ -16,7 +16,8 @@ BugReports: https://github.com/ironholds/rgeolocate/issues
 LinkingTo: Rcpp
 Imports:
     Rcpp,
-    httr
+    httr,
+    dplyr
 Suggests:
     testthat,
     knitr,
